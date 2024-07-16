@@ -1,14 +1,23 @@
 import _ from 'lodash';
 import './style.css';
 
-function component(){
+function globalContainer(){
     const element = document.createElement("div");
 
     // Lodash, now imported by this script
-    element.innerHTML = _.join(["Hello", "webpack"], " ");
-    element.classList.add("hello");
+    element.classList.add("global-container");
 
     return element;
 }
 
-document.body.appendChild(component());
+function addButtons()
+{
+    const button = document.createElement("button");
+    button.classList.add("home");
+    button.classList.add("the_menu");
+    button.classList.add("contact_us");
+}
+
+console.log("Hello, it is working.");
+document.body.appendChild(globalContainer());
+// document.body.globalContainer().appendChild(addButtons());

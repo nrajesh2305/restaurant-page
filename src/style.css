@@ -1,4 +1,31 @@
-.hello
+.global-container
 {
-    color: red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-areas: "home the_menu contact_us"
+                         "... ... ..."
+}
+
+button
+{
+    width: 100%;
+    
+}
+
+.home
+{
+    grid-area: home;
+}
+
+.menu
+{
+    grid-area: the_menu;
+}
+
+.contact_us
+{
+    grid-area: contact_us;
 }
