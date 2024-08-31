@@ -1,0 +1,57 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.global-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-areas: "home the_menu contact_us"
+                         "info-section info-section info-section"
+}
+
+.nav-container
+{
+    grid-area: 1 / 1 / 1 / 4;
+    display: flex;
+}
+
+.home, .the_menu, .contact_us
+{
+    background-color: tan;
+    width: 33.333%;
+    cursor: pointer;
+    border: 2px solid black;
+    font-size: min(calc(1rem + 2vh), 8vh);
+}
+
+.home:hover, .the_menu:hover, .contact_us:hover
+{
+    background-color: rgb(165, 137, 103);
+    transition: 0.25s;
+}
+
+.home
+{
+    grid-area: home;
+}
+
+.the_menu
+{
+    grid-area: the_menu;
+}
+
+.contact_us
+{
+    grid-area: contact_us;
+}
+
+.info-section
+{
+    grid-area: info-section;
+}
