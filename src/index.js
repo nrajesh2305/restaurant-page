@@ -1,4 +1,7 @@
 import "./style.css";
+import Home from "./home";
+import Menu from "./menu";
+import Contact from "./contact_us";
 
 let global_container = document.createElement("div");
 let nav_container = document.createElement("div");
@@ -20,97 +23,18 @@ menu.innerText = "Menu";
 contact_us.className = "contact_us";
 contact_us.innerText = "Contact Us";
 
-home.addEventListener("click", () =>
-{
-    home.style.backgroundColor = "rgb(165, 137, 103)";
-    menu.style.backgroundColor = "tan";
-    contact_us.style.backgroundColor = "tan";
-    home.addEventListener("mouseover", () => 
-    {
-        home.style.transition = "0.25s";
-        home.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    home.addEventListener("mouseout", () => 
-    {
-        home.style.transition = "0.25s";
-        home.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    menu.addEventListener("mouseover", () => 
-    {
-        menu.style.transition = "0.25s";
-        menu.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    menu.addEventListener("mouseout", () => 
-    {
-        menu.style.transition = "0.25s";
-        menu.style.backgroundColor = "tan";
-    });
-    contact_us.addEventListener("mouseover", () => 
-    {
-        contact_us.style.transition = "0.25s";
-        contact_us.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    contact_us.addEventListener("mouseout", () => 
-    {
-        contact_us.style.transition = "0.25s";
-        contact_us.style.backgroundColor = "tan";
-    });
-});
+let info_section = document.querySelector("#info-section");
+info_section.id = "info-section";
 
-menu.addEventListener("click", () =>
-{
-    menu.style.backgroundColor = "rgb(165, 137, 103)";
-    home.style.backgroundColor = "tan";
-    contact_us.style.backgroundColor = "tan";
-    menu.addEventListener("mouseover", () =>
-    {
-        menu.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    menu.addEventListener("mouseout", () =>
-    {
-        menu.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    home.addEventListener("mouseover", () => 
-    {
-        home.style.transition = "0.25s";
-        home.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    home.addEventListener("mouseout", () => 
-    {
-        home.style.transition = "0.25s";
-        home.style.backgroundColor = "tan";
-    });
-    contact_us.addEventListener("mouseover", () => 
-    {
-        contact_us.style.transition = "0.25s";
-        contact_us.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    contact_us.addEventListener("mouseout", () => 
-    {
-        contact_us.style.transition = "0.25s";
-        contact_us.style.backgroundColor = "tan";
-    });
-});
+let nav = document.querySelector("nav");
 
-contact_us.addEventListener("click", () =>
-{
-    contact_us.addEventListener("mouseover", () => 
-    {
-        contact_us.style.transition = "0.25s";
-        contact_us.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    contact_us.addEventListener("mouseout", () => 
-    {
-        contact_us.style.transition = "0.25s";
-        contact_us.style.backgroundColor = "rgb(165, 137, 103)";
-    });
-    contact_us.style.backgroundColor = "rgb(165, 137, 103)";
-    home.style.backgroundColor = "tan";
-    menu.style.backgroundColor = "tan";
-});
+home.addEventListener("click", Home);
 
-let info_section = document.createElement("div");
-info_section.className = "info-section";
+menu.addEventListener("click", Menu);
+
+contact_us.addEventListener("click", Contact);
+
+Home();
 
 document.body.appendChild(global_container);
 global_container.appendChild(nav_container);

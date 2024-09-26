@@ -1,7 +1,13 @@
+:root 
+{
+    --system-ui: system-ui, "Roboto", sans-serif, Helvetica, Arial, sans-serif, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 body
 {
     margin: 0;
     padding: 0;
+    font-family: var(--system-ui);
 }
 
 .global-container
@@ -51,7 +57,7 @@ body
     grid-area: contact_us;
 }
 
-.info-section
+#info-section
 {
     grid-area: info-section;
 }
