@@ -14,27 +14,26 @@ let menu = document.createElement("button");
 let contact_us = document.createElement("button");
 
 home.className = "home";
+home.id = "home";
 home.innerText = "Home";
 home.style.backgroundColor = "rgb(165, 137, 103)";
 
 menu.className = "the_menu";
+menu.id = "menu";
 menu.innerText = "Menu";
 
 contact_us.className = "contact_us";
+contact_us.id = "contact_us";
 contact_us.innerText = "Contact Us";
 
 let info_section = document.querySelector("#info-section");
 info_section.id = "info-section";
-
-let nav = document.querySelector("nav");
 
 home.addEventListener("click", Home);
 
 menu.addEventListener("click", Menu);
 
 contact_us.addEventListener("click", Contact);
-
-Home();
 
 document.body.appendChild(global_container);
 global_container.appendChild(nav_container);
