@@ -28,19 +28,11 @@ contact_us.innerText = "Contact Us";
 
 let info_section = document.querySelector("#info-section");
 info_section.id = "info-section";
-let isHomeClicked = false
 
-if(!isHomeClicked){
-    isHomeClicked = !isHomeClicked;
-    home.addEventListener("click", () => 
-    {
-        Home()
-    });
-}
-else
+home.addEventListener("click", () => 
 {
-    console.log();
-}
+    Home()
+});
 
 menu.addEventListener("click", Menu);
 
