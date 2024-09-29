@@ -90,8 +90,15 @@ body
 
 .menu_item
 {
+    display: grid;
     background-color: #FFFFF0;
+    border: 2px solid black;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "item_description item_image";
 }
+
+
 
 .restaurant_logo
 {
@@ -102,7 +109,7 @@ body
     background-attachment: fixed;
     background-position: center;
     position: relative;
-    transform: scaleX(160%);
+    transform: scaleX(100%);
     zoom: 50%;
 
 }
@@ -125,6 +132,18 @@ body
     align-content: center;
     font-weight: bold;
     font-style: italic;
+}
+
+.item_description
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 36ch;
+    margin-left: 1.5em;
+    color: red;
+    font-size: 1rem;
 }
 
 .send_message-container
